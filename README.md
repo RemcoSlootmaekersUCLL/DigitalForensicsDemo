@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digital Forensics Demo
 
-## Getting Started
+## De Zaak
 
-First, run the development server:
+Op school is er een document **"IncidentenVerslag_Sporthal_2025.pdf"** gelekt. Dit werd opgesteld na een ruzie tijdens de les LO tussen Emma en Lars, een week eerder. Het document bevat:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Beschrijving van een fysieke duwpartij
+- Aantekeningen over wie er begonnen zou zijn volgens de omstanders
+- Namen van omstanders
+- Notitie dat het incident "verdere opvolging" krijgt
+- Mogelijke gevolgen (gesprek met ouders / strafstudie, tijdelijke schorsing)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Door het uitlekken van dit rapport kwamen plots _alle_ betrokkenen in een slecht daglicht te staan. Daardoor zijn ook de directe betrokkenen verdacht: **Emma V., Lars D. en Noah S.**
+We geven één hint mee:  
+**Alle drie hebben ze een reden om het rapport te wíllen lekken — maar slechts één motief houdt technisch steek.**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Hints
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Iemand voelde zich **onrechtvaardig beoordeeld** en dacht dat het lekken zijn/haar reputatie zou redden.</br>
+Iemand anders wilde dat **anderen de "ware toedracht"** zouden zien, omdat het verslag volgens hem / haar belangrijke context wegliet.</br>
+De derde persoon hoopte door het lek te bewijzen dat hij / zij **niet was wie het verslag van hem / haar maakte**.
