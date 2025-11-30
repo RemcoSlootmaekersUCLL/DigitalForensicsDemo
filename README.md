@@ -1,6 +1,6 @@
 # Digital Forensics Demo
 
-## De Zaak
+## Het Incident
 
 Op school is er een document **"IncidentenVerslag_Sporthal_2025.pdf"** gelekt. Dit werd opgesteld na een ruzie tijdens de les LO tussen Emma en Lars, een week eerder. Het document bevat:
 
