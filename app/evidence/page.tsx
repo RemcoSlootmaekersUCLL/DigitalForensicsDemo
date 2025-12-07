@@ -17,7 +17,7 @@ const EvidencePage = () => {
   return (
     <>
       <div className="m-auto w-[800px] p-2">
-        <h2>Bestanden</h2>
+        <h2 className="text-2xl font-serif">Bestanden</h2>
         <ul>
           {files &&
             files?.length > 0 &&

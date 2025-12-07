@@ -12,12 +12,12 @@ const Header = () => {
     <header>
       <nav>
         <ul
-          className="font-sans text-2xl text-white flex justify-center gap-2"
+          className="font-sans text-2xl text-white flex justify-center gap-6"
           style={{ backgroundColor: "var(--ucll-red)" }}
         >
           {links.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
+            <li key={link.href} className="my-2">
+              | <Link href={link.href}>{link.label} |</Link>
             </li>
           ))}
         </ul>

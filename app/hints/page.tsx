@@ -13,7 +13,7 @@ const HintsPage = () => {
 
   return (
     <div className="m-auto w-[800px] p-2">
-      <h2>Hints</h2>
+      <h2 className="text-2xl font-serif">Hints</h2>
       <button
         onClick={() => setShowHints(!showHints)}
         style={{ marginBottom: "1rem", padding: "0.3rem 0.5rem" }}
