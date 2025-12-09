@@ -34,11 +34,11 @@
 6. Eindpuzzel: Server reboot panel
    Een visueel paneel met:
 
-- CPU overheat warning → repareer door een slider naar beneden te trekken.
-- Network module offline → klik op 3 knipperende knoppen in juiste volgorde.
-- Enter recovery key → gebruik de ROT13-uitkomst.
+   - CPU overheat warning → repareer door een slider naar beneden te trekken.
+   - Network module offline → klik op 3 knipperende knoppen in juiste volgorde.
+   - Enter recovery key → gebruik de ROT13-uitkomst.
 
-Daarna speelt een kleine animatie “Server restored”.
+   Daarna speelt een kleine animatie “Server restored”.
 
 ## Look & feel
 
