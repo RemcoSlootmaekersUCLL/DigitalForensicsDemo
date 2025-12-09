@@ -45,12 +45,12 @@ export default function FirewallPuzzlePage() {
   return (
     <div className="w-full flex flex-col items-center p-6 text-white">
       <h1 className="text-3xl font-bold mb-4">🔥 Firewall Puzzel</h1>
-      <p className="text-gray-300 max-w-xl text-center mb-6">
-        De server geeft een foutmelding:<br />
-        <span className="font-bold">“Update server werkt via poort 443 en resolutie via 53.”</span>
-        <br />
-        Kies voor elke verbinding: <strong>ALLOW</strong> of <strong>BLOCK</strong>
-      </p>
+      <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
+            Firewall Puzzel<br />
+            Je moet 4 netwerkverbindingen beoordelen en beslissen of ze moeten worden toegestaan of geblokkeerd volgens de firewallregels.<br />
+
+            Kies voor elke verbinding: <strong>ALLOW</strong> of <strong>BLOCK</strong>
+        </p>
 
       <div className="flex gap-6 flex-wrap justify-center">
         <div className="space-y-4">
