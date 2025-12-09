@@ -30,6 +30,8 @@ In het logbestand zijn er heel wat IP-addressen te vinden. Zoek op het internet 
 
 Dit is een manier van geheimhouding waar je zeer dankbaar om moet zijn. De reden dat hackers niet zomaar alle berichten die je verstuurt kunnen lezen, is omdat deze berichten geëncrypteerd worden voordat ze over het internet verstuurd worden. Dit wil zeggen: versleuteld. Alleen de persoon met de juiste sleutel (die in een ander netwerk-pakket verstuurd wordt) kan de berichten terug decrypten. Dit is nu juist wat er mis is gelopen. We hebben het geëncrypteerde bestand gekregen, maar we missen de sleutel. We zullen het heel simpel houden, want dit is best een ingewikkeld systeem... Voor eenvoud gebruiken we het RSA-algoritme. Met deze informatie kun je verder op de website.
 
+<!-- misschien veranderen naar code debugging... -->
+
 ### 6. Recovery
 
 We zijn er bijna! We moeten nog 1 ding doen. De hardware (meerbepaald processor) is aan het oververhitten. Los dit zo snel mogelijk op, zodat de processor niet compleet oververhit en onbruikbaar wordt! Zet daarna het systeem weer aan en kijk of de netwerkmodule juist opstart (deze heb je normaal gezien eerder gefixt). Eenmaal je de recovery key invult, zal de server weer beschikbaar zijn over het hele bedrijf!
