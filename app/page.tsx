@@ -1,13 +1,26 @@
 "use client";
 
-export default function Home() {
+import { useState, useEffect } from "react";
+import ReactMarkDown from "react-markdown";
+
+const Home = () => {
+  const [markdownContent, setMarkdownContent] = useState("");
+
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/RemcoSlootmaekersUCLL/DigitalForensicsDemo/main/README.md"
+    )
+      .then((res) => res.text())
+      .then((text) => setMarkdownContent(text));
+  }, []);
+
   return (
     <div className="w-[800px] mx-auto p-2">
-      <h1 className="text-2xl font-serif">De Zaak</h1>
-      <p className="mt-1">
-        Uitleg over opdracht - Beschrijving van de case - Beschrijving over de
-        route naar de oplossing (in stappen, natuurlijk geen volledige solution)
-      </p>
+      <div id="readme-md">
+        <ReactMarkDown>{markdownContent}</ReactMarkDown>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;
