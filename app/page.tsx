@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div className="w-[800px] mx-auto p-2">
-      <div id="readme-md">
+      <div className="markdown-body">
         <ReactMarkDown>{markdownContent}</ReactMarkDown>
       </div>
     </div>
