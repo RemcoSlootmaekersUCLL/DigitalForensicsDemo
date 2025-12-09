@@ -26,13 +26,51 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.markdown-body {
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+
+  & h1 {
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
+  & h2 {
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  & h3 {
+    font-size: large;
+    font-weight: 500;
+  }
+
+  & p {
+    font-size: medium;
+  }
+}
+
 @keyframes shake {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-6px); }
-  40% { transform: translateX(6px); }
-  60% { transform: translateX(-6px); }
-  80% { transform: translateX(6px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .animate-shake {
@@ -40,8 +78,14 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fadeIn {
