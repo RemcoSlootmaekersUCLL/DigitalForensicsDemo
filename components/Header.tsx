@@ -8,7 +8,10 @@ const Header = () => {
 
   const links = [
     { href: "/", label: "Case" },
-    { href: "/terminal", label: "Terminal" },
+    {
+      href: "https://remcoslootmaekersucll.github.io/workshopDemoTerminal/",
+      label: "Terminal",
+    },
   ];
 
   return (
