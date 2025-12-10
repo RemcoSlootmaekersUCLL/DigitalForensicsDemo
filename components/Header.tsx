@@ -8,8 +8,6 @@ const Header = () => {
 
   const links = [
     { href: "/", label: "Case" },
-    { href: "/evidence", label: "Bewijs" },
-    { href: "/hints", label: "Hints" },
     { href: "/terminal", label: "Terminal" },
   ];
 
