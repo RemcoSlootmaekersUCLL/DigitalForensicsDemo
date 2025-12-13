@@ -8,7 +8,7 @@ Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentj
 
 ### 1. Login
 
-Ga naar [de server zijn website](EFFECTIEVE LINK) om in te loggen in de server interface. Er staat een kleine tip om het wachtwoord te vinden.
+Ga naar [de website](https://remcoslootmaekersucll.github.io/DigitalForensicsDemo/) om in te loggen in de server interface. Er staat een kleine tip om het wachtwoord te vinden.
 
 ### 2. Terminal
 
