@@ -40,6 +40,8 @@ body {
   & h2 {
     font-size: larger;
     font-weight: bold;
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 
   & h3 {
@@ -49,6 +51,7 @@ body {
 
   & p {
     font-size: medium;
+    margin-bottom: 10px;
   }
 }
 
