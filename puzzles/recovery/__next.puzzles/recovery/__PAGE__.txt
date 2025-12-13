@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[68942,["/DigitalForensicsDemo/_next/static/chunks/29e79e7083764fb7.js","/DigitalForensicsDemo/_next/static/chunks/4b83fc669b4f5033.js"],"default"]
+3:I[97367,["/DigitalForensicsDemo/_next/static/chunks/ff1a16fafef87110.js","/DigitalForensicsDemo/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"v3Y0Q2f20RxdnMN8PsEhm","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen w-full bg-gradient-to-br from-gray-900 to-black","children":["$","$L2",null,{"children":["$","div",null,{"className":"text-white text-center p-10","children":[["$","h1",null,{"className":"text-3xl font-bold mb-4","children":"Recovery"}],["$","p",null,{"className":"text-gray-300 mb-6","children":"Recovery puzzel placeholder"}],["$","p",null,{"className":"mt-4 text-green-400","children":"Gefeliciteerd! Je hebt alle puzzels doorlopen."}]]}]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
