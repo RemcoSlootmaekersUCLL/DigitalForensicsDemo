@@ -76,8 +76,9 @@ export default function FirewallPuzzlePage() {
   };
 
   return (
-    <PuzzleLayout>
-      <div className="w-full flex flex-col items-center p-6 text-white">
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-black">
+      <PuzzleLayout>
+        <div className="w-full flex flex-col items-center p-6 text-white">
         <h1 className="text-3xl font-bold mb-4">Firewall</h1>
         <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
           Je moet 4 netwerkverbindingen beoordelen en beslissen of ze moeten
@@ -131,6 +132,7 @@ export default function FirewallPuzzlePage() {
           </>
         )}
       </div>
-    </PuzzleLayout>
+      </PuzzleLayout>
+    </div>
   );
 }

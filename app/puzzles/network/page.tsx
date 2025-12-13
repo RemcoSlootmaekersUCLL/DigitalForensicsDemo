@@ -33,8 +33,9 @@ const NetworkTracing = () => {
   };
 
   return (
-    <PuzzleLayout>
-      <div className="w-full flex flex-col items-center p-6 text-white">
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-black">
+      <PuzzleLayout>
+        <div className="w-full flex flex-col items-center p-6 text-white">
         <h1 className="text-3xl font-bold mb-4">Netwerk Tracing</h1>
         <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
           In het logbestand staan meerdere IP-adressen. Interne IP-adressen
@@ -88,7 +89,8 @@ const NetworkTracing = () => {
           </>
         )}
       </div>
-    </PuzzleLayout>
+      </PuzzleLayout>
+    </div>
   );
 };
 
