@@ -16,6 +16,7 @@ export default function LockScreen() {
   const submitPassword = () => {
   if (password === correctPassword) {
     Cookies.set("unlocked", "true");
+    Cookies.set("puzzleProgress", "1");
     router.push("/");
   } else {
     setError(true);

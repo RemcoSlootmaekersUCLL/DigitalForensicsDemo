@@ -2,7 +2,7 @@
 
 ## De opdracht
 
-Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentje verloren. Is hij gecrasht? Is hij gehackt? We hebben geen idee. Dit is aan jou om te onderzoeken.
+Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentje verloren. Is hij gecrasht? Is hij gehackt? We hebben geen idee. Dit is aan jou om te onderzoeken. Wel goed om te weten: na het oplossen van elke opdracht krijg je een code, houd deze bij ;)
 
 ## De puzzels
 
@@ -26,11 +26,9 @@ Bericht van de **error**: "De server werkt via poort 443 en resolutie via 53."
 
 In het logbestand zijn er heel wat IP-addressen te vinden. Zoek op het internet alle interne IP-addressen _(IP-addressen die niet gerouteerd worden over het publieke netwerk)_ en vergelijk deze met de IP's in het logbestand. Is er eentje die er niet hoort? Overduidelijk wel, anders stellen we de vraag niet... Aan jou om te vinden welke dit is.
 
-### 5. Encryptie
+### 5. Programmeren
 
-Dit is een manier van geheimhouding waar je zeer dankbaar om moet zijn. De reden dat hackers niet zomaar alle berichten die je verstuurt kunnen lezen, is omdat deze berichten geëncrypteerd worden voordat ze over het internet verstuurd worden. Dit wil zeggen: versleuteld. Alleen de persoon met de juiste sleutel (die in een ander netwerk-pakket verstuurd wordt) kan de berichten terug decrypten. Dit is nu juist wat er mis is gelopen. We hebben het geëncrypteerde bestand gekregen, maar we missen de sleutel. We zullen het heel simpel houden, want dit is best een ingewikkeld systeem... Voor eenvoud gebruiken we het RSA-algoritme. Met deze informatie kun je verder op de website.
-
-<!-- misschien veranderen naar code debugging... -->
+Nu een stukje code. Voer het bestand uit door op de knop "Uitvoeren" te klikken en kijk wat er gebeurt.
 
 ### 6. Recovery
 
