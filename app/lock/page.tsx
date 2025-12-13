@@ -14,26 +14,30 @@ export default function LockScreen() {
   const correctPassword = "1985"; // geboortejaar netwerkbeheerder +1
 
   const submitPassword = () => {
-  if (password === correctPassword) {
-    Cookies.set("unlocked", "true");
-    Cookies.set("puzzleProgress", "1");
-    router.push("/");
-  } else {
-    setError(true);
-    setTimeout(() => setError(false), 600);
-  }
-};
+    if (password === correctPassword) {
+      Cookies.set("unlocked", "true");
+      const puzzleProgress = Number(Cookies.get("puzzleProgress") ?? 0);
+
+      if (puzzleProgress < 1) {
+        Cookies.set("puzzleProgress", "1");
+      }
+      router.push("/puzzles/terminal");
+    } else {
+      setError(true);
+      setTimeout(() => setError(false), 600);
+    }
+  };
 
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black text-white relative font-sans">
-
       {/* Tip Post-it */}
       <div className="absolute top-6 right-6 bg-yellow-200 text-black p-4 rounded shadow-xl w-60 rotate-2 border border-yellow-300">
         <p className="text-sm font-semibold">
           🎉 Vandaag viert de netwerkbeheerder zijn verjaardag!
         </p>
         <p className="text-sm font-semibold">
-          💡 Tip: De jaren kloppen bijna… maar iedereen lijkt nét iets te vroeg geboren.
+          💡 Tip: De jaren kloppen bijna… maar iedereen lijkt nét iets te vroeg
+          geboren.
         </p>
       </div>
 
@@ -61,15 +65,33 @@ export default function LockScreen() {
           <h2 className="text-xl font-bold mb-4">📁 Personeelslijst</h2>
 
           <ul className="text-sm leading-7">
-            <li><strong>Noah S.</strong> – Admin – 1999</li>
-            <li><strong>Emma V.</strong> – IT – 2002</li>
-            <li><strong>Klaas A.</strong> – Consultant – 1983</li>
-            <li><strong>Lotte D.</strong> – HR – 1995</li>
-            <li><strong>Sven B.</strong> – Helpdesk – 2000</li>
-            <li><strong>Amira K.</strong> – Data Analyst – 1994</li>
-            <li><strong>Tom R.</strong> – Netwerkbeheerder – 1984</li>
-            <li><strong>Victor D.</strong> – Security Analyst – 1991</li>
-            <li><strong>Nina F.</strong> – Frontend Developer – 1999</li>
+            <li>
+              <strong>Noah S.</strong> – Admin – 1999
+            </li>
+            <li>
+              <strong>Emma V.</strong> – IT – 2002
+            </li>
+            <li>
+              <strong>Klaas A.</strong> – Consultant – 1983
+            </li>
+            <li>
+              <strong>Lotte D.</strong> – HR – 1995
+            </li>
+            <li>
+              <strong>Sven B.</strong> – Helpdesk – 2000
+            </li>
+            <li>
+              <strong>Amira K.</strong> – Data Analyst – 1994
+            </li>
+            <li>
+              <strong>Tom R.</strong> – Netwerkbeheerder – 1984
+            </li>
+            <li>
+              <strong>Victor D.</strong> – Security Analyst – 1991
+            </li>
+            <li>
+              <strong>Nina F.</strong> – Frontend Developer – 1999
+            </li>
           </ul>
 
           <button
@@ -87,7 +109,9 @@ export default function LockScreen() {
           type="password"
           placeholder="Wachtwoord..."
           className={`px-4 py-2 rounded-lg text-black text-lg bg-white shadow-lg focus:ring-2 focus:ring-blue-400 ${
-            error ? "animate-shake border-2 border-red-500" : "border border-gray-300"
+            error
+              ? "animate-shake border-2 border-red-500"
+              : "border border-gray-300"
           }`}
           value={password}
           onChange={(e) => setPassword(e.target.value)}

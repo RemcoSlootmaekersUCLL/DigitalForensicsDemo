@@ -15,9 +15,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-[800px] mx-auto p-2">
-      <div className="markdown-body">
-        <ReactMarkDown>{markdownContent}</ReactMarkDown>
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-black">
+      <div className="w-[800px] mx-auto p-2">
+        <div className="markdown-body">
+          <ReactMarkDown>{markdownContent}</ReactMarkDown>
+        </div>
       </div>
     </div>
   );
