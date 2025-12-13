@@ -2,7 +2,7 @@
 
 ## De opdracht
 
-Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentje verloren. Is hij gecrasht? Is hij gehackt? We hebben geen idee. Dit is aan jou om te onderzoeken.
+Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentje verloren. Is hij gecrasht? Is hij gehackt? We hebben geen idee. Dit is aan jou om te onderzoeken. Wel goed om te weten: na het oplossen van elke opdracht krijg je een code, houd deze bij ;)
 
 ## De puzzels
 
