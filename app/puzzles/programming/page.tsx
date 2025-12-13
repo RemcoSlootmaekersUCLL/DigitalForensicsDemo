@@ -11,8 +11,9 @@ export default function ProgrammingPuzzle() {
     router.push("/puzzles/recovery");
   };
   return (
-    <PuzzleLayout>
-      <div className="text-white text-center p-10">
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-black">
+      <PuzzleLayout>
+        <div className="text-white text-center p-10">
         <h1 className="text-3xl font-bold mb-4">Programmeren</h1>
         <p className="text-gray-300 mb-6">Programmeer puzzel placeholder</p>
         <button
@@ -22,6 +23,7 @@ export default function ProgrammingPuzzle() {
           Volgende puzzel ➜
         </button>
       </div>
-    </PuzzleLayout>
+      </PuzzleLayout>
+    </div>
   );
 }
