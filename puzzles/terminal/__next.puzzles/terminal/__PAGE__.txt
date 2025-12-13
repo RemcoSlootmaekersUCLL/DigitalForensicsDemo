@@ -1,5 +1,6 @@
 1:"$Sreact.fragment"
-2:I[97367,["/DigitalForensicsDemo/_next/static/chunks/ff1a16fafef87110.js","/DigitalForensicsDemo/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"buildId":"eyLkTmOS-4mbplBruLxDi","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"text-white text-center p-10","children":[["$","h1",null,{"className":"text-3xl font-bold mb-4","children":"💻 Terminal"}],["$","p",null,{"className":"text-gray-300","children":["De terminal puzzel komt later nog!",["$","br",null,{}],"(Maar de navigatie werkt al 😉)"]}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
+2:I[68942,["/DigitalForensicsDemo/_next/static/chunks/cb97d90865adf2ee.js","/DigitalForensicsDemo/_next/static/chunks/f1e2dcdc196f292f.js"],"default"]
+3:I[97367,["/DigitalForensicsDemo/_next/static/chunks/ff1a16fafef87110.js","/DigitalForensicsDemo/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"bGlWvkcGeZ6OWk5IImx-k","rsc":["$","$1","c",{"children":[["$","$L2",null,{"children":["$","div",null,{"className":"text-white text-center p-10","children":[["$","h1",null,{"className":"text-3xl font-bold mb-4","children":"💻 Terminal"}],["$","p",null,{"className":"text-gray-300","children":["De terminal puzzel komt later nog!",["$","br",null,{}],"(Maar de navigatie werkt al 😉)"]}]]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

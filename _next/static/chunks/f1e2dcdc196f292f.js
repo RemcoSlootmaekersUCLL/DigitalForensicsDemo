@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,68942,e=>{"use strict";var t=e.i(43476),u=e.i(71645),c=e.i(18566);function o({children:e}){let o=(0,c.useRouter)();return(0,u.useEffect)(()=>{document.cookie.includes("unlocked=true")||o.push("/lock")},[]),(0,t.jsx)(t.Fragment,{children:e})}e.s(["default",()=>o])}]);
