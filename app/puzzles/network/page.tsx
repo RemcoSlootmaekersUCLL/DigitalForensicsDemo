@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import PuzzleLayout from "../layout";
 
 const NetworkTracing = () => {
   const router = useRouter();
@@ -31,57 +32,59 @@ const NetworkTracing = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center p-6 text-white">
-      <h1 className="text-3xl font-bold mb-4">🌐 Netwerk Tracing</h1>
-      <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
-        In het logbestand staan meerdere IP-adressen. Interne IP-adressen worden
-        niet gerouteerd over het publieke netwerk (openbare internet). Zoek met
-        deze informatie welk IP-adres hier duidelijk niet thuishoort. Klik op
-        het verdachte IP-adres.
-      </p>
+    <PuzzleLayout>
+      <div className="w-full flex flex-col items-center p-6 text-white">
+        <h1 className="text-3xl font-bold mb-4">🌐 Netwerk Tracing</h1>
+        <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
+          In het logbestand staan meerdere IP-adressen. Interne IP-adressen
+          worden niet gerouteerd over het publieke netwerk (openbare internet).
+          Zoek met deze informatie welk IP-adres hier duidelijk niet thuishoort.
+          Klik op het verdachte IP-adres.
+        </p>
 
-      <div className="bg-slate-900 border border-slate-700 rounded-lg p-6 w-full max-w-md space-y-3">
-        {ipAddresses.map((ip) => (
-          <button
-            key={ip}
-            onClick={() => handleSelect(ip)}
-            className={`w-full text-left px-4 py-2 rounded-md transition border ${
-              selected === ip
-                ? "border-blue-500 bg-slate-800"
-                : "border-slate-700 hover:bg-slate-800"
-            }`}
-          >
-            {ip}
-          </button>
-        ))}
+        <div className="bg-slate-900 border border-slate-700 rounded-lg p-6 w-full max-w-md space-y-3">
+          {ipAddresses.map((ip) => (
+            <button
+              key={ip}
+              onClick={() => handleSelect(ip)}
+              className={`w-full text-left px-4 py-2 rounded-md transition border ${
+                selected === ip
+                  ? "border-blue-500 bg-slate-800"
+                  : "border-slate-700 hover:bg-slate-800"
+              }`}
+            >
+              {ip}
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={verifyChoice}
+          className="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
+        >
+          Verifieer IP
+        </button>
+
+        {error && <p className="text-red-400 mt-4">{error}</p>}
+
+        {completed && (
+          <>
+            <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
+              ✅ Verdacht IP gevonden
+              <br />
+              Dit IP-adres is publiek en hoort niet in het interne netwerk.
+              <br />
+              Code: <strong>NT-4821</strong>
+            </div>
+            <button
+              className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
+              onClick={() => router.push("/puzzles/debugging")}
+            >
+              Volgende puzzel ➜
+            </button>
+          </>
+        )}
       </div>
-      <button
-        onClick={verifyChoice}
-        className="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
-      >
-        Verifieer IP
-      </button>
-
-      {error && <p className="text-red-400 mt-4">{error}</p>}
-
-      {completed && (
-        <>
-          <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-            ✅ Verdacht IP gevonden
-            <br />
-            Dit IP-adres is publiek en hoort niet in het interne netwerk.
-            <br />
-            Code: <strong>NT-4821</strong>
-          </div>
-          <button
-            className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
-            onClick={() => router.push("/puzzles/debugging")}
-          >
-            Volgende puzzel ➜
-          </button>
-        </>
-      )}
-    </div>
+    </PuzzleLayout>
   );
 };
 
