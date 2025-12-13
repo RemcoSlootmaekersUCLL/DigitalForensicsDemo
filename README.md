@@ -12,9 +12,7 @@ Ga naar [de website](https://remcoslootmaekersucll.github.io/DigitalForensicsDem
 
 ### 2. Terminal
 
-Eenmaal je in het systeem bent, wordt je naar een terminal gebracht. Hier moet je een naam zien te vinden. Je kan met `help` alle beschikbare commando's zien. Er staan er een heleboel, maar je hebt maar een handjevol nodig.
-
-**Tip:** `man` is kort voor "manual"...
+Eenmaal je in het systeem bent, wordt je naar een terminal gebracht. Hier moet je een aantal dingetjes vinden. Kun je de naam van de algemene systeembeheerder vinden? En de tijdzone, uitgedrukt in GMT, waarin de server staat? Je kan met `help` alle beschikbare commando's zien. Er staan er een heleboel, maar je hebt maar een paar nodig.
 
 ### 3. Firewall
 
