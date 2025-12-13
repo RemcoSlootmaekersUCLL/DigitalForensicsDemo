@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import PuzzleLayout from "../layout";
+import ProgressService from "@/services/ProgressService";
 
 const NetworkTracing = () => {
   const router = useRouter();
@@ -34,7 +35,7 @@ const NetworkTracing = () => {
   return (
     <PuzzleLayout>
       <div className="w-full flex flex-col items-center p-6 text-white">
-        <h1 className="text-3xl font-bold mb-4">🌐 Netwerk Tracing</h1>
+        <h1 className="text-3xl font-bold mb-4">Netwerk Tracing</h1>
         <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
           In het logbestand staan meerdere IP-adressen. Interne IP-adressen
           worden niet gerouteerd over het publieke netwerk (openbare internet).
@@ -77,7 +78,10 @@ const NetworkTracing = () => {
             </div>
             <button
               className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
-              onClick={() => router.push("/puzzles/debugging")}
+              onClick={() => {
+                ProgressService.unlock(4);
+                router.push("/puzzles/programming");
+              }}
             >
               Volgende puzzel ➜
             </button>

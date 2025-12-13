@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -5,6 +6,7 @@ import { useRouter } from "next/navigation";
 import ConnectionRow from "@/components/ConnectionRow";
 import FirewallHints from "@/components/FirewallHints";
 import PuzzleLayout from "../layout";
+import ProgressService from "@/services/ProgressService";
 
 type Connection = {
   id: number;
@@ -76,10 +78,8 @@ export default function FirewallPuzzlePage() {
   return (
     <PuzzleLayout>
       <div className="w-full flex flex-col items-center p-6 text-white">
-        <h1 className="text-3xl font-bold mb-4">🔥 Firewall Puzzel</h1>
+        <h1 className="text-3xl font-bold mb-4">Firewall</h1>
         <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
-          Firewall Puzzel
-          <br />
           Je moet 4 netwerkverbindingen beoordelen en beslissen of ze moeten
           worden toegestaan of geblokkeerd volgens de firewallregels.
           <br />
@@ -121,7 +121,10 @@ export default function FirewallPuzzlePage() {
             </div>
             <button
               className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
-              onClick={() => router.push("/puzzles/terminal")}
+              onClick={() => {
+                ProgressService.unlock(3);
+                router.push("/puzzles/network");
+              }}
             >
               Volgende puzzel ➜
             </button>
