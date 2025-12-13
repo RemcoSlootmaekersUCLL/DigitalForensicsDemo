@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "export",
   basePath: isProd ? "/DigitalForensicsDemo" : "",
+  assetPrefix: isProd ? "/DigitalForensicsDemo/" : "",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
