@@ -17,7 +17,7 @@ export default function LockScreen() {
   if (password === correctPassword) {
     Cookies.set("unlocked", "true");
     Cookies.set("puzzleProgress", "1");
-    router.push("/");
+    router.push("/puzzles/terminal");
   } else {
     setError(true);
     setTimeout(() => setError(false), 600);
