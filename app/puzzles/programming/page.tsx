@@ -49,7 +49,7 @@ export default function ProgrammingPuzzle() {
     }
     const hasClosingBracket = codeLines.slice(expectedLines.length - 1).some(line => line === '}');
     if (match && hasClosingBracket) {
-      setOutput("Goed gedaan! De functie is nu correct afgesloten.");
+      setOutput("Goed gedaan! De functie is nu correct afgesloten.<br />Code: <strong>PG-2898</strong>");
       setSuccess(true);
     } else {
       setOutput("Could not compile. '}' missing on line 9");
@@ -92,9 +92,10 @@ export default function ProgrammingPuzzle() {
             </button>
           </div>
           {output && (
-            <div className={`mt-2 p-3 rounded ${success ? "bg-green-800 text-green-200" : "bg-red-900 text-red-200"}`}>
-              {output}
-            </div>
+            <div
+              className={`mt-2 p-3 rounded ${success ? "bg-green-800 text-green-200" : "bg-red-900 text-red-200"}`}
+              dangerouslySetInnerHTML={{ __html: output }}
+            />
           )}
         </div>
       </PuzzleLayout>
