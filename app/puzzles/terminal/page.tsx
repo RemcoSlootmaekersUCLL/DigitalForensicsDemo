@@ -123,7 +123,7 @@ export default function TerminalPuzzle() {
                 <div className="w-full max-w-2xs bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
                   ✅ Geverifieerd
                   <br />
-                  Code: <strong>TM-849</strong>
+                  Code: <strong>TM-8492</strong>
                 </div>
               </div>
 
