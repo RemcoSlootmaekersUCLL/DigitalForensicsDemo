@@ -13,7 +13,7 @@ export default function TerminalPuzzle() {
   return (
     <PuzzleLayout>
       <div className="text-white text-center p-10">
-        <h1 className="text-3xl font-bold mb-4">💻 Terminal</h1>
+        <h1 className="text-3xl font-bold mb-4">Terminal</h1>
         <p className="text-gray-300 mb-6">
           Klik op de knop hieronder om de web-based terminal te openen. Voer daar de opdrachten uit zoals gevraagd.
         </p>
