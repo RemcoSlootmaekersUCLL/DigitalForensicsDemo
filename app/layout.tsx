@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Digital Forensics Demo",
-  description: "Made with React and Next.",
+  description:
+    "Made for last year high school students to get an introduction to IT in higher education.",
 };
 
 export default function RootLayout({
