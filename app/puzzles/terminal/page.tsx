@@ -68,7 +68,7 @@ export default function TerminalPuzzle() {
             <div className="w-full max-w-xl bg-gray-800/60 rounded-xl p-5 space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-1">
-                  Name:
+                  Naam:
                 </label>
                 <input
                   type="text"
@@ -81,7 +81,7 @@ export default function TerminalPuzzle() {
 
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-1">
-                  Server name:
+                  Servernaam:
                 </label>
                 <input
                   type="text"
@@ -94,7 +94,7 @@ export default function TerminalPuzzle() {
 
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-1">
-                  Timezone:
+                  Tijdzone (uitgedrukt in GMT):
                 </label>
                 <input
                   type="text"
