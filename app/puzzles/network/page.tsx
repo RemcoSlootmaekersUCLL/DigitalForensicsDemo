@@ -74,8 +74,6 @@ const NetworkTracing = () => {
               Verdacht IP gevonden
               <br />
               Dit IP-adres is publiek en hoort niet in het interne netwerk.
-              <br />
-              Code: <strong>NT-4821</strong>
             </div>
             <button
               className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"

@@ -118,8 +118,6 @@ export default function FirewallPuzzlePage() {
               Firewall Config OK
               <br />
               Je hebt alle verbindingen correct beoordeeld!
-              <br />
-              Code: <strong>FW-1378</strong>
             </div>
             <button
               className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
