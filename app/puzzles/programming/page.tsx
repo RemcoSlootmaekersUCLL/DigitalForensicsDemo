@@ -95,8 +95,7 @@ export default function ProgrammingPuzzle() {
           </div>
           {output && success && (
             <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-              Goed gedaan! De functie is nu correct afgesloten!<br />
-              Code: <strong>PG-2898</strong>
+              Goed gedaan! De functie is nu correct afgesloten!
             </div>
           )}
           {output && !success && (

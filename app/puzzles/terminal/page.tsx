@@ -74,7 +74,7 @@ export default function TerminalPuzzle() {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Kent"
+                  placeholder="e.g. Kent Robinson"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
                   disabled={completed}
                 />
@@ -102,7 +102,7 @@ export default function TerminalPuzzle() {
                   type="text"
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
-                  placeholder="e.g. Europe/Brussels"
+                  placeholder="e.g. UTC-2"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
                   disabled={completed}
                 />
@@ -126,8 +126,6 @@ export default function TerminalPuzzle() {
               <div className="flex justify-center mt-6">
                 <div className="w-full max-w-2xs bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
                   Geverifieerd
-                  <br />
-                  Code: <strong>TM-8492</strong>
                 </div>
               </div>
 
