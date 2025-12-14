@@ -76,6 +76,7 @@ export default function TerminalPuzzle() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Kent"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
+                  disabled={completed}
                 />
               </div>
 
@@ -89,6 +90,7 @@ export default function TerminalPuzzle() {
                   onChange={(e) => setServerName(e.target.value)}
                   placeholder="e.g. Google Public DNS Server"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
+                  disabled={completed}
                 />
               </div>
 
@@ -102,6 +104,7 @@ export default function TerminalPuzzle() {
                   onChange={(e) => setTimezone(e.target.value)}
                   placeholder="e.g. Europe/Brussels"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
+                  disabled={completed}
                 />
               </div>
             </div>
@@ -111,6 +114,7 @@ export default function TerminalPuzzle() {
             <button
               className="px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
               onClick={verifyInputs}
+              disabled={completed}
             >
               Verifieer
             </button>
@@ -121,7 +125,7 @@ export default function TerminalPuzzle() {
             <>
               <div className="flex justify-center mt-6">
                 <div className="w-full max-w-2xs bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-                  ✅ Geverifieerd
+                  Geverifieerd
                   <br />
                   Code: <strong>TM-8492</strong>
                 </div>

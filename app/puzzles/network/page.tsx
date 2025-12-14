@@ -71,7 +71,7 @@ const NetworkTracing = () => {
         {completed && (
           <>
             <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-              ✅ Verdacht IP gevonden
+              Verdacht IP gevonden
               <br />
               Dit IP-adres is publiek en hoort niet in het interne netwerk.
               <br />
