@@ -68,20 +68,21 @@ export default function TerminalPuzzle() {
             <div className="w-full max-w-xl bg-gray-800/60 rounded-xl p-5 space-y-4">
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-1">
-                  Name:
+                  Naam:
                 </label>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="e.g. Kent"
+                  placeholder="e.g. Kent Robinson"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
+                  disabled={completed}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-1">
-                  Server name:
+                  Servernaam:
                 </label>
                 <input
                   type="text"
@@ -89,19 +90,21 @@ export default function TerminalPuzzle() {
                   onChange={(e) => setServerName(e.target.value)}
                   placeholder="e.g. Google Public DNS Server"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
+                  disabled={completed}
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-semibold text-gray-300 mb-1">
-                  Timezone:
+                  Tijdzone (uitgedrukt in GMT):
                 </label>
                 <input
                   type="text"
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
-                  placeholder="e.g. Europe/Brussels"
+                  placeholder="e.g. UTC-2"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
+                  disabled={completed}
                 />
               </div>
             </div>
@@ -111,6 +114,7 @@ export default function TerminalPuzzle() {
             <button
               className="px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
               onClick={verifyInputs}
+              disabled={completed}
             >
               Verifieer
             </button>
@@ -121,9 +125,7 @@ export default function TerminalPuzzle() {
             <>
               <div className="flex justify-center mt-6">
                 <div className="w-full max-w-2xs bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-                  ✅ Geverifieerd
-                  <br />
-                  Code: <strong>TM-8492</strong>
+                  Geverifieerd
                 </div>
               </div>
 

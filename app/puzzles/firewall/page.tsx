@@ -96,6 +96,7 @@ export default function FirewallPuzzlePage() {
                 connection={conn}
                 selected={choices[conn.id] || null}
                 onSelect={(choice) => handleChoice(conn.id, choice)}
+                disabled={completed}
               />
             ))}
           </div>
@@ -114,11 +115,9 @@ export default function FirewallPuzzlePage() {
         {completed && (
           <>
             <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-              ✅ Firewall Config OK
+              Firewall Config OK
               <br />
               Je hebt alle verbindingen correct beoordeeld!
-              <br />
-              Code: <strong>FW-1378</strong>
             </div>
             <button
               className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"

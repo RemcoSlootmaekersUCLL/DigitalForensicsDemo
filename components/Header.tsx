@@ -31,7 +31,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-gray-900 shadow-md">
+    <header className="bg-gray-900 shadow-md sticky top-0 z-50">
       <nav>
         <ul className="font-sans text-lg text-white flex justify-center gap-6 py-3 items-center">
           {[{ href: "/", label: "Case" }, ...PUZZLES].map((item, idx) => {

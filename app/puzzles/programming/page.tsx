@@ -75,11 +75,13 @@ export default function ProgrammingPuzzle() {
             value={code}
             onChange={e => setCode(e.target.value)}
             spellCheck={false}
+            disabled={success}
           />
           <div className="flex gap-4 mb-4">
             <button
               className="px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition font-semibold"
               onClick={handleRun}
+              disabled={success}
             >
               Uitvoeren
             </button>
@@ -91,11 +93,13 @@ export default function ProgrammingPuzzle() {
               Volgende puzzel ➜
             </button>
           </div>
-          {output && (
-            <div
-              className={`mt-2 p-3 rounded ${success ? "bg-green-800 text-green-200" : "bg-red-900 text-red-200"}`}
-              dangerouslySetInnerHTML={{ __html: output }}
-            />
+          {output && success && (
+            <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
+              Goed gedaan! De functie is nu correct afgesloten!
+            </div>
+          )}
+          {output && !success && (
+            <div className="mt-2 p-3 rounded bg-red-900 text-red-200" dangerouslySetInnerHTML={{ __html: output }} />
           )}
         </div>
       </PuzzleLayout>
