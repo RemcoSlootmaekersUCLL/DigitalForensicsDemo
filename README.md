@@ -35,3 +35,12 @@ We zijn er bijna! We moeten nog 1 ding doen. De hardware (meerbepaald processor)
 ### About
 
 This is a Dutch-languaged project made for last year high school students to get an introduction as to what there is to learn in the IT field. It was made as a service learning assignment for college.
+
+### Installation
+
+To run the project locally, you should run:
+
+```
+npm install --legacy-peer-deps
+npm run dev
+```
