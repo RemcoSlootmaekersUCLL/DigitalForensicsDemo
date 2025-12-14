@@ -2,7 +2,7 @@
 
 ## De opdracht
 
-Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentje verloren. Is hij gecrasht? Is hij gehackt? We hebben geen idee. Dit is aan jou om te onderzoeken. Wel goed om te weten: na het oplossen van elke opdracht krijg je een code, houd deze bij ;)
+Een bedrijf dat verantwoordelijk is voor het onderhouden van servers is er eentje verloren. Is hij gecrasht? Is hij gehackt? We hebben geen idee. Dit is aan jou om te onderzoeken. Hier is een korte beschrijving van elke puzzel, maar het is niet per se nodig om te puzzels op te kunnen lossen.
 
 ## De puzzels
 
@@ -31,3 +31,7 @@ Nu een stukje code. Voer het bestand uit door op de knop "Uitvoeren" te klikken 
 ### 6. Recovery
 
 We zijn er bijna! We moeten nog 1 ding doen. De hardware (meerbepaald processor) is aan het oververhitten. Los dit zo snel mogelijk op, zodat de processor niet compleet oververhit en onbruikbaar wordt! Zet daarna het systeem weer aan en kijk of de netwerkmodule juist opstart (deze heb je normaal gezien eerder gefixt). Eenmaal je de recovery key invult, zal de server weer beschikbaar zijn over het hele bedrijf!
+
+### About
+
+This is a Dutch-languaged project made for last year high school students to get an introduction as to what there is to learn in the IT field. It was made as a service learning assignment for college.
