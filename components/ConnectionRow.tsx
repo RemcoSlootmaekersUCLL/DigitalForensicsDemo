@@ -13,10 +13,12 @@ export default function ConnectionRow({
   connection,
   selected,
   onSelect,
+  disabled = false,
 }: {
   connection: Connection;
   selected: "ALLOW" | "BLOCK" | null;
   onSelect: (choice: "ALLOW" | "BLOCK") => void;
+  disabled?: boolean;
 }) {
   return (
     <div className="bg-gray-800 p-4 rounded-xl w-80 shadow-lg flex flex-col gap-2">
@@ -30,6 +32,7 @@ export default function ConnectionRow({
           className={`flex-1 py-1 rounded-md font-semibold transition ${
             selected === "ALLOW" ? "bg-green-500 text-white" : "bg-gray-700 hover:bg-green-600"
           }`}
+          disabled={disabled}
         >
           ALLOW
         </button>
@@ -38,6 +41,7 @@ export default function ConnectionRow({
           className={`flex-1 py-1 rounded-md font-semibold transition ${
             selected === "BLOCK" ? "bg-red-500 text-white" : "bg-gray-700 hover:bg-red-600"
           }`}
+          disabled={disabled}
         >
           BLOCK
         </button>
