@@ -81,7 +81,7 @@ export default function RecoveryPuzzle() {
       setStep(3);
       setTimeout(() => setShowEnd(true), 1200);
     } else {
-      setPwError("Wachtwoord onjuist. Hint: decodeer de base64-string van 'cm9iZXJ0MTIzZy1yb3V0'.");
+      setPwError("Wachtwoord onjuist. Hint: de string: 'cm9iZXJ0MTIzZy1yb3V0' is gecodeerd in base-64.");
     }
   };
 
