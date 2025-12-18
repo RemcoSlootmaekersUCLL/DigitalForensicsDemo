@@ -29,16 +29,19 @@ export default function ProgrammingPuzzle() {
   const router = useRouter();
 
   const handleRun = () => {
-    const codeLines = code.trim().split(/\r?\n/).map(line => line.trim());
+    const codeLines = code
+      .trim()
+      .split(/\r?\n/)
+      .map((line) => line.trim());
     const expectedLines = [
-      'function average(numbers) {',
-      'let total = 0;',
-      'for (let i = 0; i < numbers.length; i++) {',
-      'total += numbers[i];',
-      '}',
-      'let avg = total / numbers.length;',
-      'return avg;',
-      '}'
+      "function average(numbers) {",
+      "let total = 0;",
+      "for (let i = 0; i < numbers.length; i++) {",
+      "total += numbers[i];",
+      "}",
+      "let avg = total / numbers.length;",
+      "return avg;",
+      "}",
     ];
     let match = true;
     for (let i = 0; i < expectedLines.length - 1; i++) {
@@ -47,9 +50,11 @@ export default function ProgrammingPuzzle() {
         break;
       }
     }
-    const hasClosingBracket = codeLines.slice(expectedLines.length - 1).some(line => line === '}');
+    const hasClosingBracket = codeLines
+      .slice(expectedLines.length - 1)
+      .some((line) => line === "}");
     if (match && hasClosingBracket) {
-      setOutput("Goed gedaan! De functie is nu correct afgesloten.<br />Code: <strong>PG-2898</strong>");
+      setOutput("Goed gedaan! De functie is nu correct afgesloten!");
       setSuccess(true);
     } else {
       setOutput("Could not compile. '}' missing on line 9");
@@ -68,15 +73,32 @@ export default function ProgrammingPuzzle() {
         <div className="text-white max-w-xl mx-auto p-6">
           <h1 className="text-3xl font-bold mb-4">Programmeren</h1>
           <p className="text-gray-300 mb-6">
-            Hieronder zie je een functie die het gemiddelde van een lijst getallen berekent. Klik op "Uitvoeren" om te zien wat er mis is. Los het probleem op zodat de code correct kan compileren.
+            Hieronder zie je een functie die het gemiddelde van een lijst
+            getallen berekent. Klik op "Uitvoeren" om te zien wat er mis is. Los
+            het probleem op zodat de code correct kan compileren. Tip: er is
+            geen fout in de logica van de code. Zoek naar problemen in de
+            syntax.
           </p>
           <textarea
-            className="w-full h-80 bg-gray-900 text-green-200 font-mono rounded p-3 mb-4 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full h-80 bg-gray-900 text-green-200 font-mono rounded p-3 mb-2 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={code}
-            onChange={e => setCode(e.target.value)}
+            onChange={(e) => setCode(e.target.value)}
             spellCheck={false}
             disabled={success}
           />
+
+          {success && (
+            <div className="mb-5">
+              <code>Output: 432378</code>
+              <br />
+              <br />
+              <code className="mb-4">
+                G-Rout heeft in de laatste 3 maanden gemiddeld €432.378 winst
+                gemaakt.
+              </code>
+            </div>
+          )}
+
           <div className="flex gap-4 mb-4">
             <button
               className="px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition font-semibold"
@@ -94,12 +116,17 @@ export default function ProgrammingPuzzle() {
             </button>
           </div>
           {output && success && (
-            <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-              Goed gedaan! De functie is nu correct afgesloten!
-            </div>
+            <>
+              <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
+                Goed gedaan! De functie is nu correct afgesloten!
+              </div>
+            </>
           )}
           {output && !success && (
-            <div className="mt-2 p-3 rounded bg-red-900 text-red-200" dangerouslySetInnerHTML={{ __html: output }} />
+            <div
+              className="mt-2 p-3 rounded bg-red-900 text-red-200"
+              dangerouslySetInnerHTML={{ __html: output }}
+            />
           )}
         </div>
       </PuzzleLayout>
