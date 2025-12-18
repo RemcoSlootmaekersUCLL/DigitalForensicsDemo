@@ -88,7 +88,7 @@ export default function TerminalPuzzle() {
                   type="text"
                   value={serverName}
                   onChange={(e) => setServerName(e.target.value)}
-                  placeholder="e.g. Google Public DNS Server"
+                  placeholder="e.g. Cloudflare"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
                   disabled={completed}
                 />
@@ -102,7 +102,7 @@ export default function TerminalPuzzle() {
                   type="text"
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
-                  placeholder="e.g. UTC-2"
+                  placeholder="e.g. GMT+1"
                   className="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
                   disabled={completed}
                 />
