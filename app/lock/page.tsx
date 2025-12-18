@@ -36,8 +36,9 @@ export default function LockScreen() {
           🎉 Vandaag viert de netwerkbeheerder zijn verjaardag!
         </p>
         <p className="text-sm font-semibold">
-          💡 Tip: De jaren kloppen bijna… maar iedereen lijkt nét iets te vroeg
-          geboren.
+          💡 Tip: Het lijkt erop dat er een typefout is gemaakt tijdens het
+          toevoegen van de netwerkbeheerder zijn gegevens. Zijn geboortejaar is
+          net een jaartje te vroeg.
         </p>
       </div>
 

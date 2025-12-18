@@ -1,8 +1,8 @@
-
 "use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import ConnectionRow from "@/components/ConnectionRow";
 import FirewallHints from "@/components/FirewallHints";
 import PuzzleLayout from "../layout";
@@ -22,8 +22,9 @@ export default function FirewallPuzzlePage() {
   const [choices, setChoices] = useState<
     Record<number, "ALLOW" | "BLOCK" | null>
   >({});
-  const [completed, setCompleted] = useState(false);
+  const [completed, setCompleted] = useState<boolean>(false);
   const [error, setError] = useState("");
+  const [showImage, setShowImage] = useState<boolean>(false);
 
   const connections: Connection[] = [
     {
@@ -79,58 +80,77 @@ export default function FirewallPuzzlePage() {
     <div className="min-h-screen w-full bg-gradient-to-br from-gray-900 to-black">
       <PuzzleLayout>
         <div className="w-full flex flex-col items-center p-6 text-white">
-        <h1 className="text-3xl font-bold mb-4">Firewall</h1>
-        <p className="text-gray-300 max-w-xl text-center mb-6 font-semibold">
-          Je moet 4 netwerkverbindingen beoordelen en beslissen of ze moeten
-          worden toegestaan of geblokkeerd volgens de firewallregels.
-          <br />
-          Kies voor elke verbinding: <strong>ALLOW</strong> of{" "}
-          <strong>BLOCK</strong>
-        </p>
+          <h1 className="text-3xl font-bold mb-4">Firewall</h1>
+          <button
+            onClick={() => setShowImage(!showImage)}
+            className="mb-4 px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
+          >
+            {!showImage
+              ? "Bekijk firewall voorbeeld"
+              : "Verberg firewall voorbeeld"}
+          </button>
 
-        <div className="flex gap-6 flex-wrap justify-center">
-          <div className="space-y-4">
-            {connections.map((conn) => (
-              <ConnectionRow
-                key={conn.id}
-                connection={conn}
-                selected={choices[conn.id] || null}
-                onSelect={(choice) => handleChoice(conn.id, choice)}
-                disabled={completed}
-              />
-            ))}
-          </div>
-          <FirewallHints />
-        </div>
+          {showImage && (
+            <Image
+              className="mb-4"
+              width={800}
+              height={400}
+              src="/static/firewall_example.jpg"
+              alt="Firewall example image"
+            ></Image>
+          )}
 
-        <button
-          onClick={verifyChoices}
-          className="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
-        >
-          Verifieer keuzes
-        </button>
+          <p className="text-gray-300 max-w-xl text-center mb-4 font-semibold">
+            Je moet 4 netwerkverbindingen beoordelen en beslissen of ze moeten
+            worden toegestaan of geblokkeerd volgens de firewallregels.
+            <br />
+            Kies voor elke verbinding: <strong>ALLOW</strong> of{" "}
+            <strong>BLOCK</strong>
+          </p>
 
-        {error && <p className="text-red-400 mt-4">{error}</p>}
-
-        {completed && (
-          <>
-            <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
-              Firewall Config OK
-              <br />
-              Je hebt alle verbindingen correct beoordeeld!
+          <div className="flex gap-6 flex-wrap justify-center mb-4">
+            <div className="space-y-4">
+              {connections.map((conn) => (
+                <ConnectionRow
+                  key={conn.id}
+                  connection={conn}
+                  selected={choices[conn.id] || null}
+                  onSelect={(choice) => handleChoice(conn.id, choice)}
+                  disabled={completed}
+                />
+              ))}
             </div>
-            <button
-              className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
-              onClick={() => {
-                ProgressService.unlock(3);
-                router.push("/puzzles/network");
-              }}
-            >
-              Volgende puzzel ➜
-            </button>
-          </>
-        )}
-      </div>
+            <FirewallHints />
+          </div>
+
+          <button
+            onClick={verifyChoices}
+            className="mb-4 px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
+          >
+            Verifieer keuzes
+          </button>
+
+          {error && <p className="text-red-400 mt-4">{error}</p>}
+
+          {completed && (
+            <>
+              <div className="mt-6 bg-green-700 px-6 py-3 rounded shadow text-lg text-center">
+                Firewall Config OK
+                <br />
+                Je hebt alle verbindingen correct beoordeeld!
+              </div>
+              <button
+                className="mt-4 px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg transition"
+                onClick={() => {
+                  ProgressService.unlock(3);
+                  router.push("/puzzles/network");
+                }}
+              >
+                Volgende puzzel ➜
+              </button>
+            </>
+          )}
+        </div>
       </PuzzleLayout>
     </div>
   );
