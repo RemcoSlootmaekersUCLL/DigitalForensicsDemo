@@ -16,13 +16,13 @@ Eenmaal je in het systeem bent, wordt je naar een terminal gebracht. Hier moet j
 
 ### 3. Firewall
 
-De firewall heeft een verkeerde configuratie. Dit weten we door een **error** die we ondervonden tijdens het verbinden met de server. Zoek de standaard poorten op van de protocollen die tevoorschijn komen en zet de juiste protocollen aan. Let op: het activeren van een fout protocol zal gevolgen hebben. De server zal open en bloot over het hele internet staan!
+De firewall heeft een verkeerde configuratie. Dit weten we door een **error** die we ondervonden tijdens het verbinden met de server. Zoek de standaard poorten op van de protocollen die tevoorschijn komen en zet de juiste protocollen aan. Let op: het activeren van een fout protocol zal gevolgen hebben. De server zal open en bloot liggen over het hele internet!
 
 Bericht van de **error**: "De server werkt via poort 443 en resolutie via 53."
 
 ### 4. Netwerk tracing
 
-In het logbestand zijn er heel wat IP-addressen te vinden. Zoek op het internet alle interne IP-addressen _(IP-addressen die niet gerouteerd worden over het publieke netwerk)_ en vergelijk deze met de IP's in het logbestand. Is er eentje die er niet hoort? Overduidelijk wel, anders stellen we de vraag niet... Aan jou om te vinden welke dit is.
+De netwerkbeheerder heeft de logbestanden bekeken en heel wat IP-adressen gevonden. Zoek op het internet alle interne IP-addressen _(IP-addressen die niet gerouteerd worden over het publieke netwerk)_ en vergelijk deze met de IP's die je te zien krijgt. Eentje past hier niet in het rijtje thuis. Aan jou de taak om deze aan te duiden.
 
 ### 5. Programmeren
 
@@ -30,7 +30,7 @@ Nu een stukje code. Voer het bestand uit door op de knop "Uitvoeren" te klikken 
 
 ### 6. Recovery
 
-We zijn er bijna! We moeten nog 1 ding doen. De hardware (meerbepaald processor) is aan het oververhitten. Los dit zo snel mogelijk op, zodat de processor niet compleet oververhit en onbruikbaar wordt! Zet daarna het systeem weer aan en kijk of de netwerkmodule juist opstart (deze heb je normaal gezien eerder gefixt). Eenmaal je de recovery key invult, zal de server weer beschikbaar zijn over het hele bedrijf!
+We zijn er bijna! De server is gecrasht door een corrupte of verdachte bestanden. Aan jou om te cross-checken met de server welke bestanden verwijderd of nagekeken moeten worden. Daarna moet je de server opnieuw verbinden door de juiste poorten te kiezen voor de drie kabels. Als je dat gedaan hebt moet je alleen nog vinden wat het wachtwoord is en dan heb je het gehaald! Goed gedaan!
 
 ### About
 
