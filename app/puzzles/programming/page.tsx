@@ -57,7 +57,7 @@ export default function ProgrammingPuzzle() {
       setOutput("Goed gedaan! De functie is nu correct afgesloten!");
       setSuccess(true);
     } else {
-      setOutput("Could not compile. '}' missing on line 9");
+      setOutput("Could not compile. something missing on line 5");
       setSuccess(false);
     }
   };
